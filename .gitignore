@@ -5,6 +5,7 @@ __pycache__/
 __pycache__
 secrets.py
 paragraphs.json
+travel.json
 income.json
 cities_data.json
 redline_maps.json

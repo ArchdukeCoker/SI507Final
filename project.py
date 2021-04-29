@@ -780,8 +780,8 @@ def main():
                                     print('1. Income data for redlined districts')
                                     print('2. Commute time for redlined districts')
                                     input3a = input(':').lower()
-                                    try:
-                                        while True:
+                                    while True:
+                                        try:
                                             if input3a =='exit':
                                                 print('Bye!')
                                                 break
@@ -812,9 +812,9 @@ def main():
                                                 print('1. Income data for redlined districts')
                                                 print('2. Commute time for redlined districts')
                                                 input3a = input(':').lower()
-                                    except KeyError:
-                                        print('Invalid input, please enter a 1 or 2, exit or back')
-                                        continue
+                                        except KeyError:
+                                            print('Invalid input, please enter a 1 or 2, exit or back')
+                                            continue
                             except KeyError:
                                 print('Invalid input, please enter a digit between 1 and 5, exit or back')
                                 continue
@@ -831,9 +831,9 @@ def main():
                                 print('Pease select from the following options as to what visualization you would like to generate')
                                 print('1. Income data for redlined districts')
                                 print('2. Commute time for redlined districts')
-                                input3a = input(':').lower()
                                 while True:
                                     try:
+                                        input3a = input(':').lower()
                                         if input3a =='exit':
                                             print('Bye!')
                                             break
@@ -850,14 +850,19 @@ def main():
                                             print('Pease select from the following options as to what visualization you would like to generate')
                                             print('1. Income data for redlined districts')
                                             print('2. Commute time for redlined districts')
-                                            input3a = input(':').lower()
+                                            #input3a = input(':').lower()
+                                            #if input3a =='1':
+                                                # try:
+                                                #     make_travel_time_to_work_map(map_data, grid, city_dict['name'][x])
+                                                # except TypeError:
+                                                #     print('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
                                         elif input3a == '2':
                                             print('In this visualization travel time to work is split into quartiles where lighter red corresponds to shorter commutes and darker red corresponds to longer commutes. Additionally, the edge colors for the polygons correspond to the historic redlining code that was used on that district')
                                             make_travel_time_to_work_map(map_data, grid, city_dict['name'][x])
                                             print('Pease select from the following options as to what visualization you would like to generate')
                                             print('1. Income data for redlined districts')
                                             print('2. Commute time for redlined districts')
-                                            input3a = input(':').lower()
+                                            #input3a = input(':').lower()
                                         else:
                                             print('Error invalid input, please enter 1, 2, exit or back')
                                             time.sleep(1)
